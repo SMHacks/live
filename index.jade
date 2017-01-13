@@ -10,7 +10,9 @@ html
   body
     nav.uk-navbar-container(uk-navbar=true)
       .uk-navbar-left
-        a.uk-navbar-item.uk-logo(href='#') SM Hacks LIVE
+        a.uk-navbar-item.uk-logo(href='#')
+          |SM Hacks LIVE&nbsp;
+          i.fa.fa-video-camera
       .uk-navbar-right
         ul.uk-navbar-nav
           li: a(href='#nav' uk-toggle=true)
@@ -23,12 +25,22 @@ html
           p This is the place for hackers at SM Hacks to check for hackathon updates.
     #nav(uk-offcanvas='overlay:true;flip:true;mode:reveal')
       .uk-offcanvas-bar
-        p: a(href='https://smhacks.devpost.com/' target='_blank') Devpost
-        p: a(href='https://drive.google.com/file/d/0B6tVJ5ml7Bt4NjBlbXNXcEZsUE0/view?usp=sharing' target='_blank') Floor plan
+        p: a(href='https://smhacks.devpost.com/' target='_blank')
+          i.fa.fa-code.fa-fw
+          |&nbsp;Devpost
+        p: a(href='https://drive.google.com/file/d/0B6tVJ5ml7Bt4NjBlbXNXcEZsUE0/view?usp=sharing' target='_blank')
+          i.fa.fa-map.fa-fw
+          |&nbsp;Floor plan
         hr
-        p: a(href='https://facebook.com/sanmateohacks' target='_blank') Facebook
-        p: a(href='https://twitter.com/sanmateohacks' target='_blank') Twitter
-        p: a(href='https://smhacks.slack.com' target='_blank') Slack
+        p: a(href='https://facebook.com/sanmateohacks' target='_blank')
+          i.fa.fa-facebook.fa-fw
+          |&nbsp;Facebook
+        p: a(href='https://twitter.com/sanmateohacks' target='_blank')
+          i.fa.fa-twitter.fa-fw
+          |&nbsp;Twitter
+        p: a(href='https://smhacks.slack.com' target='_blank')
+          i.fa.fa-slack.fa-fw
+          |&nbsp;Slack
         
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='https://getuikit.com/assets/uikit/dist/js/uikit.js')
