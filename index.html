@@ -17,16 +17,13 @@
       </div>
     </nav>
     <div style="margin-top:20px" class="uk-container">
-      <!--.uk-grid-medium(uk-grid=true)
-      div: .uk-card.uk-card-default.uk-card-body
-        h1 Only
-          b#hh x
-          |hours, 
-          b#mm y
-          |minutes, and 
-          b#ss z
-          |seconds until SM Hacks starts!
-      -->
+      <div uk-grid class="uk-grid-medium">
+        <div class="uk-width-expand@m">
+          <div class="uk-card uk-card-default uk-card-body">
+            <h1 class="uk-text-center uk-text-warning">Only <b id="hh" class="uk-text-danger">HH</b>:<b id="mm" class="uk-text-danger">MM</b>:<b id="ss" class="uk-text-danger">SS</b><span id="ev">&nbsp;until hacking starts!</span></h1>
+          </div>
+        </div>
+      </div>
       <div uk-grid class="uk-grid-medium">
         <div class="uk-width-expand@m">
           <div class="uk-card uk-card-default uk-card-body">
@@ -46,7 +43,7 @@
             <h2>Wifi</h2>
             <p>The venue wifi will not be able to support all attendees without slowing down significantly. Thus, we ask that you download all necessary software and documentation ahead of time and use hotspots / turn off wifi when possible. Even better, bring a router! These measures will ensure that everyone has the optimal hacking experience.</p>
             <h2>Final notes</h2>
-            <p>Important links are in the sidebar activated by <i class='fa fa-bars'></i>. Make sure to join the Slack and sign the waiver before coming to Informatica.</p>
+            <p>Important links are in the sidebar activated by <i class='fa fa-bars'></i>. Make sure to join the Slack and sign the waiver before coming to Informatica. It is also highly recommended that you get the iOS app to receive push notifications during the event.</p>
           </div>
         </div>
         <div class="uk-width-auto@m">
@@ -67,6 +64,7 @@
         <p><a href="https://drive.google.com/file/d/0B6tVJ5ml7Bt4NjBlbXNXcEZsUE0/view?usp=sharing" target="_blank"><i class="fa fa-map fa-fw"></i>&nbsp;Floor plan</a></p>
         <p><a href="http://waiver.smhacks.com" target="_blank"><i class="fa fa-file-text fa-fw"></i>&nbsp;Waiver</a></p>
         <hr>
+        <p><a href="https://itunes.apple.com/us/app/sm-hacks/id1193112362" target="_blank"><i class="fa fa-apple fa-fw"></i>&nbsp;iOS App</a></p>
         <p><a href="https://facebook.com/sanmateohacks" target="_blank"><i class="fa fa-facebook fa-fw"></i>&nbsp;Facebook</a></p>
         <p><a href="https://twitter.com/sanmateohacks" target="_blank"><i class="fa fa-twitter fa-fw"></i>&nbsp;Twitter</a></p>
         <p><a href="http://slack.smhacks.com" target="_blank"><i class="fa fa-slack fa-fw"></i>&nbsp;Slack</a></p>
@@ -74,5 +72,15 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://getuikit.com/assets/uikit/dist/js/uikit.js"></script>
+    <script>
+      setInterval(function(){
+        if(new Date()<1484424e6)
+          ms=new Date(new Date()<1484424e6?1484424e6:14845104e5)-new Date(),
+          hh.innerHTML=('00'+(ms/36e5|0)).slice(-2),
+          mm.innerHTML=('00'+(ms/6e5%60|0)).slice(-2),
+          ss.innerHTML=('00'+(ms/1e3%60|0)).slice(-2),
+          new Date()<1484424e6||(ev.innerHTML='&nbsp;until hacking ends!');
+      },1)
+    </script>
   </body>
 </html>
