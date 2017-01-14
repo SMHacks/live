@@ -7,7 +7,7 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     title SM Hacks LIVE
-  body
+  body.uk-background-muted
     nav.uk-navbar-container(uk-navbar=true)
       .uk-navbar-left
         a.uk-navbar-item.uk-logo(href='#')
@@ -17,12 +17,34 @@ html
         ul.uk-navbar-nav
           li: a(href='#nav' uk-toggle=true)
             i.fa.fa-bars.fa-2x
+
     .uk-container(style='margin-top:20px')
       .uk-grid-medium(uk-grid=true)
-        div: .uk-card.uk-card-default.uk-card-body <a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#E95F28" href="https://twitter.com/sanmateohacks">Tweets by sanmateohacks</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        div: .uk-card.uk-card-default.uk-card-body
-          h1 Hey there! Wonder what this is?
-          p This is the place for hackers at SM Hacks to check for hackathon updates.
+        div(class='uk-width-expand@m'): .uk-card.uk-card-default.uk-card-body
+          h1 To all attendees
+          p Oh man, it's almost hacking time! I'm sure we're all quite excited to get going, but there are some things you should be aware of beforehand.
+          h2 Things to bring
+          ul
+            li Computer, phone, chargers, and headphones
+            li Sleeping bag
+            li Optional change of clothes, toiletries
+            li Any gadgets you want to use in projects
+            li Positive energy!
+          p We provide food and drink.
+          h2 Wifi
+          p The venue wifi will not be able to support all attendees without slowing down significantly. Thus, we ask that you download all necessary software and documentation ahead of time and use hotspots / turn off wifi when possible. Even better, bring a router! These measures will ensure that everyone has the optimal hacking experience.
+          h2 Final notes
+          p Important links are in the sidebar activated by <i class='fa fa-bars'></i>. Make sure to join the Slack and sign the waiver before coming to Informatica.
+        div(class='uk-width-auto@m')
+          .uk-card.uk-card-default.uk-card-body <a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#E95F28" href="https://twitter.com/sanmateohacks">Tweets by sanmateohacks</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          br
+          .uk-card.uk-card-default.uk-card-body
+            h1 Next events
+            p <code>10:00am</code> - Mentor Check-In
+            p <code>10:30am</code> - Hacker Check-In
+            p <code>11:15am</code> - Opening Ceremony
+            p <code>12:00am</code> - Start Hacking, Team Mixer, Lunch
+    
     #nav(uk-offcanvas='overlay:true;flip:true;mode:reveal')
       .uk-offcanvas-bar
         p: a(href='https://smhacks.devpost.com/' target='_blank')
@@ -31,6 +53,9 @@ html
         p: a(href='https://drive.google.com/file/d/0B6tVJ5ml7Bt4NjBlbXNXcEZsUE0/view?usp=sharing' target='_blank')
           i.fa.fa-map.fa-fw
           |&nbsp;Floor plan
+        p: a(href='http://waiver.smhacks.com' target='_blank')
+          i.fa.fa-file-text.fa-fw
+          |&nbsp;Waiver
         hr
         p: a(href='https://facebook.com/sanmateohacks' target='_blank')
           i.fa.fa-facebook.fa-fw
@@ -38,7 +63,7 @@ html
         p: a(href='https://twitter.com/sanmateohacks' target='_blank')
           i.fa.fa-twitter.fa-fw
           |&nbsp;Twitter
-        p: a(href='https://smhacks.slack.com' target='_blank')
+        p: a(href='http://slack.smhacks.com' target='_blank')
           i.fa.fa-slack.fa-fw
           |&nbsp;Slack
         
