@@ -20,7 +20,7 @@
       <div uk-grid class="uk-grid-medium">
         <div class="uk-width-expand@m">
           <div class="uk-card uk-card-default uk-card-body">
-            <h1 class="uk-text-center uk-text-warning">Only <b id="hh" class="uk-text-danger">HH</b>:<b id="mm" class="uk-text-danger">MM</b>:<b id="ss" class="uk-text-danger">SS</b><span id="ev">&nbsp;until hacking starts!</span></h1>
+            <h1 class="uk-text-center uk-text-warning">Only <b id="t" class="uk-text-danger">TIME</b><span id="ev">&nbsp;until hacking ends!</span></h1>
           </div>
         </div>
       </div>
@@ -72,14 +72,12 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://getuikit.com/assets/uikit/dist/js/uikit.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
+    <script src="https://rawgit.com/icambron/moment-countdown/master/dist/moment-countdown.min.js"></script>
     <script>
       setInterval(function(){
-        if(new Date()<1484424e6)
-          ms=new Date(new Date()<1484424e6?1484424e6:14845104e5)-new Date(),
-          hh.innerHTML=('00'+(ms/36e5|0)).slice(-2),
-          mm.innerHTML=('00'+(ms/6e5%60|0)).slice(-2),
-          ss.innerHTML=('00'+(ms/1e3%60|0)).slice(-2),
-          new Date()<1484424e6||(ev.innerHTML='&nbsp;until hacking ends!');
+        t.innerHTML=moment('2017-01-15 12:00:00').countdown()+''
       },1)
     </script>
   </body>

@@ -22,12 +22,8 @@ html
       .uk-grid-medium(uk-grid=true)
         div(class='uk-width-expand@m'): .uk-card.uk-card-default.uk-card-body
           h1.uk-text-center.uk-text-warning Only 
-            b#hh.uk-text-danger HH
-            |:
-            b#mm.uk-text-danger MM
-            |:
-            b#ss.uk-text-danger SS
-            span#ev &nbsp;until hacking starts!
+            b#t.uk-text-danger TIME
+            span#ev &nbsp;until hacking ends!
       .uk-grid-medium(uk-grid=true)
         div(class='uk-width-expand@m'): .uk-card.uk-card-default.uk-card-body
           h1 To all attendees
@@ -83,12 +79,10 @@ html
         
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='https://getuikit.com/assets/uikit/dist/js/uikit.js')
+    script(src='https://momentjs.com/downloads/moment.min.js')
+    script(src='https://rawgit.com/mckamey/countdownjs/master/countdown.min.js')
+    script(src='https://rawgit.com/icambron/moment-countdown/master/dist/moment-countdown.min.js')
     script.
       setInterval(function(){
-        if(new Date()<1484424e6)
-          ms=new Date(new Date()<1484424e6?1484424e6:14845104e5)-new Date(),
-          hh.innerHTML=('00'+(ms/36e5|0)).slice(-2),
-          mm.innerHTML=('00'+(ms/6e5%60|0)).slice(-2),
-          ss.innerHTML=('00'+(ms/1e3%60|0)).slice(-2),
-          new Date()<1484424e6||(ev.innerHTML='&nbsp;until hacking ends!');
+        t.innerHTML=moment('2017-01-15 12:00:00').countdown()+''
       },1)
