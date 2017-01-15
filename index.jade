@@ -21,9 +21,7 @@ html
     .uk-container(style='margin-top:20px')
       .uk-grid-medium(uk-grid=true)
         div(class='uk-width-expand@m'): .uk-card.uk-card-default.uk-card-body
-          h1.uk-text-center.uk-text-warning Only<br>
-            b#t.uk-text-danger TIME
-            span#ev <br>until hacking ends!
+          h1.uk-text-center.uk-text-warning Hacking has ended.
       .uk-grid-medium(uk-grid=true)
         div(class='uk-width-expand@m'): .uk-card.uk-card-default.uk-card-body
           h1 Hacking's End
@@ -64,10 +62,3 @@ html
         
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='https://getuikit.com/assets/uikit/dist/js/uikit.js')
-    script(src='https://momentjs.com/downloads/moment.min.js')
-    script(src='https://rawgit.com/mckamey/countdownjs/master/countdown.min.js')
-    script(src='https://rawgit.com/icambron/moment-countdown/master/dist/moment-countdown.min.js')
-    script.
-      setInterval(function(){
-        t.innerHTML=moment('2017-01-15 12:00:00').countdown()
-      },1)
